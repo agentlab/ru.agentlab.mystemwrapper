@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="OSGi Logger Service Bridge to MYSTEMWRaPPER Update Site" url="">
+      OSGi Logger Service Bridge to MYSTEMWRaPPER Update Site
+   </description>
+	  
+   <feature id="ru.agentlab.mystemwrapper.feature"><category name="ru.agentlab.mystemwrapper"/></feature>
+   <feature id="ru.agentlab.mystemwrapper.feature.source"><category name="ru.agentlab.mystemwrapper"/></feature>
+</site>

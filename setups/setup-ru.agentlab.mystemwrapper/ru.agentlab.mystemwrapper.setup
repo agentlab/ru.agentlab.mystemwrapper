@@ -68,9 +68,16 @@
       </annotation>
       <requirement
           name="*"/>
+      <requirement
+          name="com.googlecode.json-simple"/>
       <sourceLocator
           rootFolder="${ru.agentlab.mystemwrapper.git.clone.location}"
           locateNestedProjects="true"/>
+      <repositoryList
+          name="Neon">
+        <repository
+            url="http://agentlab.ru/pd/p2/eclipseorbit/"/>
+      </repositoryList>
     </targlet>
   </setupTask>
   <setupTask

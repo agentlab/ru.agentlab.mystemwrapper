@@ -23,16 +23,8 @@
          version="0.0.0"
          unpack="false"/>
 
-   <plugin
+ <!--  <plugin
          id="ru.agentlab.mystemwrapper.mac"
-         os="macosx"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="ru.agentlab.mystemwrapper.test"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -40,10 +32,9 @@
 
    <plugin
          id="ru.agentlab.mystemwrapper.win"
-         os="win32"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/>
+         unpack="false"/>-->
 
 </feature>

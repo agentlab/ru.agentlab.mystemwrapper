@@ -5,8 +5,8 @@ Bundle-SymbolicName: ru.agentlab.mystemwrapper
 Bundle-Version: 1.0.0.qualifier
 Export-Package: ru.agentlab.mystemwrapper
 Import-Package: com.google.common.base;version="18.0.0",
- org.eclipse.core.runtime;version="3.5.0",
  org.json.simple;version="1.1.1",
  org.json.simple.parser;version="1.1.1",
  org.osgi.framework;version="1.8.0"
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.12.0"
