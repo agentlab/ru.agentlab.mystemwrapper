@@ -3,13 +3,11 @@ package ru.agentlab.mystemwrapper;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Properties;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -28,6 +26,7 @@ import com.google.common.base.Joiner;
 public class StemmerWrapper
 {
     private static class StemmerWrapperHolder
+
     {
         public static final StemmerWrapper instance = new StemmerWrapper();
     }
@@ -37,14 +36,14 @@ public class StemmerWrapper
         return StemmerWrapperHolder.instance;
     }
 
-    private Properties prop = new Properties();
+    // private Properties prop = new Properties();
     private JSONParser parser = new JSONParser();
 
     private StemmerWrapper()
     {
 
-        URL url = null;
-
+        /*URL url = null;
+        
         try
         {
             url = new URL("platform:/plugin/ru.agentlab.mystemwrapper.mac/mystem.properties"); //$NON-NLS-1$
@@ -54,9 +53,9 @@ public class StemmerWrapper
             // TODO Auto-generated catch block
             e1.printStackTrace();
         }
-//        InputStream in =
-//            getClass().getResourceAsStream("platform:/plugin/ru.agentlab.mystemwrapper.feature/mystem.properties"); //$NON-NLS-1$
-
+        //        InputStream in =
+        //            getClass().getResourceAsStream("platform:/plugin/ru.agentlab.mystemwrapper.feature/mystem.properties"); //$NON-NLS-1$
+        
         InputStream in = null;
         try
         {
@@ -67,7 +66,7 @@ public class StemmerWrapper
             // TODO Auto-generated catch block
             e1.printStackTrace();
         }
-
+        
         try
         {
             prop.load(in);
@@ -76,7 +75,7 @@ public class StemmerWrapper
         catch (IOException e)
         {
             e.printStackTrace();
-        }
+        }*/
     }
 
     /**
@@ -215,8 +214,8 @@ public class StemmerWrapper
 
     public List<String> mystemPartOfWork(Collection<String> words) throws IOException
     {
-        String pathToMystem = prop.getProperty("path_to_mystem_mac");
-
+        //String pathToMystem = prop.getProperty("path_to_mystem_mac");
+        String pathToMystem = "ru.agentlab.mystemwrapper"; //$NON-NLS-1$
         String absPath = getPluginDir(pathToMystem);
 
         /* URL url = new URL(pathToMystem);
@@ -231,7 +230,17 @@ public class StemmerWrapper
             e.printStackTrace();
         }
         File f = new File(pathToMystem);*/
-        absPath = absPath + "mystem";
+
+        String nameOfFile = null;
+        if (Platform.getOS().compareTo(Platform.OS_MACOSX) == 0)
+        {
+            nameOfFile = "mystem";
+        }
+        if ((Platform.getOS().compareTo(Platform.OS_WIN32) == 0))
+        {
+            nameOfFile = "mystem.exe";
+        }
+        absPath = absPath + nameOfFile;
         String[] commands =
             new String[] { absPath, "-nid", "--weight", "--eng-gr", "--format", "json", "--generate-all" };
         Process proc = Runtime.getRuntime().exec(commands);

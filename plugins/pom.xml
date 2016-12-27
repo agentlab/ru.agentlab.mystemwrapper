@@ -15,8 +15,6 @@
 
 	<modules>
 		<module>ru.agentlab.mystemwrapper</module>
-		<module>ru.agentlab.mystemwrapper.mac</module>
-		<module>ru.agentlab.mystemwrapper.win</module>
 	</modules>
 
 	<build>

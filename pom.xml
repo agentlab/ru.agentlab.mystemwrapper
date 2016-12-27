@@ -19,7 +19,7 @@
 		<module>releng/ru.agentlab.mystemwrapper.releng</module>
 		<module>plugins</module>
 		<module>features</module>
-	<!--	<module>sites/ru.agentlab.mystemwrapper.site</module>  -->
+		<module>sites/ru.agentlab.mystemwrapper.site</module>
 	</modules>
 
 		<profiles>
