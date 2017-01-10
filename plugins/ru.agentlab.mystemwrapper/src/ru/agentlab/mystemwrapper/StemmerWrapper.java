@@ -43,7 +43,7 @@ public class StemmerWrapper
     {
 
         /*URL url = null;
-        
+
         try
         {
             url = new URL("platform:/plugin/ru.agentlab.mystemwrapper.mac/mystem.properties"); //$NON-NLS-1$
@@ -55,7 +55,7 @@ public class StemmerWrapper
         }
         //        InputStream in =
         //            getClass().getResourceAsStream("platform:/plugin/ru.agentlab.mystemwrapper.feature/mystem.properties"); //$NON-NLS-1$
-        
+
         InputStream in = null;
         try
         {
@@ -66,7 +66,7 @@ public class StemmerWrapper
             // TODO Auto-generated catch block
             e1.printStackTrace();
         }
-        
+
         try
         {
             prop.load(in);
@@ -234,11 +234,11 @@ public class StemmerWrapper
         String nameOfFile = null;
         if (Platform.getOS().compareTo(Platform.OS_MACOSX) == 0)
         {
-            nameOfFile = "mystem";
+			nameOfFile = "mystem_mac64";
         }
         if ((Platform.getOS().compareTo(Platform.OS_WIN32) == 0))
         {
-            nameOfFile = "mystem.exe";
+			nameOfFile = "mystem_win64.exe";
         }
         absPath = absPath + nameOfFile;
         String[] commands =
