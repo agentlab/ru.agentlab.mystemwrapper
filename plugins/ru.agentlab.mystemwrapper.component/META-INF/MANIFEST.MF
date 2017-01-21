@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Component
+Bundle-SymbolicName: ru.agentlab.mystemwrapper.component
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Service-Component: OSGI-INF/ru.agentlab.mystemwrapper.component.xml
+Bundle-ActivationPolicy: lazy
+Import-Package: ru.agentlab.mystemwrapper,
+ ru.agentlab.mystemwrapper.service
