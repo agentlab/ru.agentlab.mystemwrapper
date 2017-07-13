@@ -77,7 +77,7 @@
 	<repositories>
 		<repository>
 			<id>agentlab</id>
-			<url>http://agentlab.ru/maven/repository</url>
+			<url>https://agentlab.ru/maven/repository</url>
 		</repository>
 	</repositories>
 

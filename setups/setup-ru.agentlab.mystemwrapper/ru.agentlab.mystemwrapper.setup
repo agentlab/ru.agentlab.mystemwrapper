@@ -76,7 +76,12 @@
       <repositoryList
           name="Neon">
         <repository
-            url="http://agentlab.ru/pd/p2/eclipseorbit/"/>
+            url="https://agentlab.ru/pd/p2/eclipseorbit/"/>
+      </repositoryList>
+      <repositoryList
+          name="Oxygen">
+        <repository
+            url="https://agentlab.ru/pd/p2/eclipseorbit/"/>
       </repositoryList>
     </targlet>
   </setupTask>
